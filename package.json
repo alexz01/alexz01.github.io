@@ -7,8 +7,8 @@
     "build": "ng build",
     "build-dev": "ng build --configuration development",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "test-browser": "ng test --browsers ChromeHeadless"
+    "test": "ng test --configuration production",
+    "test-browser": "ng test"
   },
   "private": true,
   "dependencies": {
