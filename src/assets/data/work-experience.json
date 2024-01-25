@@ -1,0 +1,69 @@
+[
+    {
+        "position": "Senior Software Engineer",
+        "company": "Willis Towers Watson",
+        "location":"Buffalo, NY",
+        "detail": [],
+        "from": {
+            "month": 4,
+            "year": 2023
+        },
+        "to": null
+    },
+    {
+        "position": "Lead Software Engineer",
+        "company": "Willis Towers Watson",
+        "location":"Buffalo, NY",
+        "detail": [],
+        "from": {
+            "month": 4,
+            "year": 2022
+        },
+        "to": {
+            "month": 3,
+            "year": 2023
+        }
+    },
+    {
+        "position": "Software Engineer",
+        "company": "Willis Towers Watson",
+        "location":"Buffalo, NY",
+        "detail": [],
+        "from": {
+            "month": 8,
+            "year": 2019
+        },
+        "to": {
+            "month": 3,
+            "year": 2022
+        }
+    },
+    {
+        "position": "Systems Engineer",
+        "company": "Tata Consultancy Engineering",
+        "location":"Mumbai, India",
+        "detail": [],
+        "from": {
+            "month": 6,
+            "year": 2017
+        },
+        "to": {
+            "month": 8,
+            "year": 2017
+        }
+    },
+    {
+        "position": "Assistant Systems Engineer",
+        "company": "Tata Consultancy Engineering",
+        "location":"Mumbai, India",
+        "detail": [],
+        "from": {
+            "month": 6,
+            "year": 2015
+        },
+        "to": {
+            "month": 5,
+            "year": 2017
+        }
+    }
+]
