@@ -1,0 +1,44 @@
+{
+    "name": {
+        "first": "Alexander",
+        "middle": "",
+        "last": "Umale"
+    },
+    "email": {
+        "personal": [
+            "alexander.umale@gmail.com",
+            "aumale@buffalo.edu"
+        ],
+        "work": [
+            "alex.umale@wtwco.com"
+        ]
+    },
+    "weblinks": {
+        "personal": [
+            ""
+        ],
+        "work": [
+            "linkedin.com/in/alexanderumale",
+            "github.com/alexz01",
+            "alexz01.github.io"
+        ]
+    },
+    "address": [
+        {
+            "line1": "269 Winspear Ave",
+            "line2": "",
+            "city": "Buffalo",
+            "state": {
+                "name": "New York",
+                "code": "NY"
+            },
+            "country": "United States"
+        }
+    ],
+    "phone": [
+        {
+            "countryCode": 1,
+            "number": 7162757794
+        }
+    ]
+}
