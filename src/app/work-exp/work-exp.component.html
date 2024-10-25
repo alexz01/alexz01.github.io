@@ -1,8 +1,11 @@
 <section>
     <h3>Work experience</h3>
-    <div *ngFor="let exp of workExp | async">
-        <p>{{exp.position}}</p>
-        <p>{{exp.company}} ({{exp.from | dateFormat}} - {{ exp.to | dateFormat}})</p>
-        <p>{{exp.location}}</p>
-    </div>
+    <ul>
+        <li *ngFor="let exp of workExp">
+            <p>{{exp.position}}</p>
+            <p>{{exp.company}} ({{exp.from}} - {{ exp.to }})</p>
+            <p>{{exp.location}}</p>
+            <hr>
+        </li>
+    </ul>
 </section>

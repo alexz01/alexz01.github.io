@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { WorkExpComponent } from './work-exp/work-exp.component';
 import { DateFormatPipe } from './pipes/date-format.pipe';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EducationComponent } from './education/education.component';
+import { IntroductionComponent } from './introduction/introduction.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     ErrorComponent,
     WorkExpComponent,
-    DateFormatPipe
+    DateFormatPipe,
+    EducationComponent,
+    IntroductionComponent
   ],
   imports: [
     BrowserModule,

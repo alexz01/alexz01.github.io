@@ -4,15 +4,55 @@ import { Observable } from 'rxjs';
 import { WorkExperience } from '../app.model';
 
 @Component({
-  selector: 'work-exp',
+  selector: 'r-work',
   templateUrl: './work-exp.component.html',
   styleUrls: ['./work-exp.component.scss']
 })
-export class WorkExpComponent implements OnInit {
+export class WorkExpComponent {
 
-  workExp!: Observable<Array<WorkExperience>>;
-  constructor(private http: HttpClient) { }
-  ngOnInit(): void {
-    this.workExp = this.http.get<Array<WorkExperience>>('assets/data/work-experience.json');
+  workExp: Array<WorkExperience> = [
+    {
+      "position": "Senior Software Engineer",
+      "company": "Willis Towers Watson",
+      "location": "Buffalo, NY",
+      "detail": [],
+      "from": "April 2023",
+      "to": "Present"
+    },
+    {
+      "position": "Lead Software Engineer",
+      "company": "Willis Towers Watson",
+      "location": "Buffalo, NY",
+      "detail": [],
+      "from": "April 2022",
+      "to": "March 2023"
+    },
+    {
+      "position": "Software Engineer",
+      "company": "Willis Towers Watson",
+      "location": "Buffalo, NY",
+      "detail": [],
+      "from": "August 2019",
+      "to": "March 2022"
+    },
+    {
+      "position": "Systems Engineer",
+      "company": "Tata Consultancy Engineering",
+      "location": "Mumbai, India",
+      "detail": [],
+      "from": "June 2017",
+      "to": "August 2017"
+    },
+    {
+      "position": "Assistant Systems Engineer",
+      "company": "Tata Consultancy Engineering",
+      "location": "Mumbai, India",
+      "detail": [],
+      "from": "June 2015",
+      "to": "May 2017"
+    }
+  ]
+
+  constructor(){
   }
 }
