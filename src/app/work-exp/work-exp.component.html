@@ -8,4 +8,13 @@
             <hr>
         </li>
     </ul>
+    <a class="link-secondary" href="#" (click)="$event.preventDefault(); hidePrev=!hidePrev" *ngIf="hidePrev">Previous experience</a>
+    <ul [(ngbCollapse)]="hidePrev">
+        <li *ngFor="let exp of prevWorkExp">
+            <p>{{exp.position}}</p>
+            <p>{{exp.company}} ({{exp.from}} - {{ exp.to }})</p>
+            <p>{{exp.location}}</p>
+            <hr>
+        </li>
+    </ul>
 </section>

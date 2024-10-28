@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
 
 body {
     margin: 0px;
@@ -7,25 +8,9 @@ body {
     // font-family: Arial, Helvetica, sans-serif;
 }
 
-// a[href]:hover::after {
-//     content: attr(href);
-//     position: absolute;
-//     bottom: 100%;
-//     left:0;
-
-// }
-
-// .container {
-//     @media (max-width: 576) {
-//         padding-left: 0px;
-//         padding-right: 0px;
-//     }
-//     @media (max-width: 768px) {
-//         padding-left: 50px;
-//         padding-right: 50px;
-//     }
-// }
-/* Importing Bootstrap SCSS file. */
+html{
+    scroll-padding-top: 100px;
+}
 
 .text-justified {
     text-align: justify;
@@ -33,6 +18,12 @@ body {
 }
 
 section {
+    display: block;
     min-height: 100vh;
+    height: 100%;
     width: 100%;
+}
+
+a {
+    text-decoration: none;
 }

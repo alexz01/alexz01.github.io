@@ -9,7 +9,8 @@ import { WorkExperience } from '../app.model';
   styleUrls: ['./work-exp.component.scss']
 })
 export class WorkExpComponent {
-
+  hidePrev = true;
+  
   workExp: Array<WorkExperience> = [
     {
       "position": "Senior Software Engineer",
@@ -34,7 +35,10 @@ export class WorkExpComponent {
       "detail": [],
       "from": "August 2019",
       "to": "March 2022"
-    },
+    }
+  ];
+
+  prevWorkExp: Array<WorkExperience> = [
     {
       "position": "Systems Engineer",
       "company": "Tata Consultancy Engineering",
