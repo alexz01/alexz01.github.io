@@ -11,6 +11,8 @@ import { DateFormatPipe } from './pipes/date-format.pipe';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EducationComponent } from './education/education.component';
 import { IntroductionComponent } from './introduction/introduction.component';
+import { ContactComponent } from './contact/contact.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { IntroductionComponent } from './introduction/introduction.component';
     WorkExpComponent,
     DateFormatPipe,
     EducationComponent,
-    IntroductionComponent
+    IntroductionComponent,
+    ContactComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,18 @@
 <section>
-    <h3>Education</h3>
-    <ul>
-        <li *ngFor="let edu of education">
-            <p>{{edu.degree}} in {{edu.course}}</p>
-            <p>{{edu.name}} ({{edu.from}} - {{edu.to}})</p>
-            <p>{{edu.location}}</p>
-            <hr>
-        </li>
-    </ul>
+    <div class="container">
+        <h2 class="text-center mb-4">Education</h2>
+
+        <div class="row" *ngFor="let edu of education">
+            <div class="col-md-3">
+                <p>
+                    {{edu.from}} - {{edu.to}}
+                </p>
+            </div>
+            <div class="col-md-9">
+                <h5>{{edu.degree}} in {{edu.course}}</h5>
+                <p>{{edu.name}}</p>
+                <p>{{edu.location}}</p>
+            </div>
+        </div>
+    </div>
 </section>

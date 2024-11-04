@@ -8,6 +8,7 @@
     "build-dev": "ng build --configuration development",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --configuration production",
+    "test-watch": "ng test --configuration production --watch",
     "test-browser": "ng test"
   },
   "private": true,

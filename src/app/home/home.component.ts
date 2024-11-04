@@ -9,12 +9,17 @@ import { ActivatedRoute, EventType, Router } from '@angular/router';
 export class HomeComponent {
   navCollapsed = true;
   currentAnchor: string | null = null;
-  constructor(private activedRoute: ActivatedRoute, private router: Router) {
+  constructor(private router: Router,
+  ) {
     router.events.subscribe(e => {
       if (e.type == EventType.Scroll) {
-        console.log(e.anchor);
         this.currentAnchor = e.anchor;
       }
     });
+
+  }
+
+  closeNavTimed() {
+    window.setTimeout(() => this.navCollapsed = true, 1000);
   }
 }

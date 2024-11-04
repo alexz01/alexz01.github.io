@@ -3,8 +3,7 @@ import { Education } from '../app.model';
 
 @Component({
   selector: 'r-education',
-  templateUrl: './education.component.html',
-  styleUrls: ['./education.component.scss']
+  templateUrl: './education.component.html'
 })
 export class EducationComponent {
 
