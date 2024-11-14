@@ -1,19 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
 
 body {
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    // filter: grayscale(90%);
 }
 
-.container {
-    @media (max-width: 576) {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    @media (max-width: 768px) {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
+html {
+    scroll-padding-top: 100px;
 }
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+
+.text-justified {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+section {
+    display: block;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
+a, button.btn-link {
+    text-decoration: none;
+}
+
+#test {
+    background-image: url(assets/bg1.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    // max-width: 100%;
+    // background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+
+img.face{
+    border-radius: 100px;
+    // filter: grayscale(90%);
+}

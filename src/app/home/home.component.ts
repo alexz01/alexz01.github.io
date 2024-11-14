@@ -1,12 +1,25 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { ActivatedRoute, EventType, Router } from '@angular/router';
 
 @Component({
-  selector: 'home',
+  selector: 'r-home',
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
-  constructor(private httpClient: HttpClient) {
-    httpClient.get('/assets/data/bio.json').subscribe(console.log);
+  navCollapsed = true;
+  currentAnchor: string | null = null;
+  constructor(private router: Router,
+  ) {
+    router.events.subscribe(e => {
+      if (e.type == EventType.Scroll) {
+        this.currentAnchor = e.anchor;
+      }
+    });
+
+  }
+
+  closeNavTimed() {
+    window.setTimeout(() => this.navCollapsed = true, 1000);
   }
 }

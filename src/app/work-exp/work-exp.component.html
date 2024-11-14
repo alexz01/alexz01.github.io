@@ -1,8 +1,42 @@
 <section>
-    <h3>Work experience</h3>
-    <div *ngFor="let exp of workExp | async">
-        <p>{{exp.position}}</p>
-        <p>{{exp.company}} ({{exp.from | dateFormat}} - {{ exp.to | dateFormat}})</p>
-        <p>{{exp.location}}</p>
+    <div class="container">
+        
+        <h2 class="text-center mb-4">Work experience</h2>
+
+        <div class="row" *ngFor="let exp of workExp" id="latest-experience">
+            <div class="col-md-3">
+                <p>
+                    {{exp.from}} - {{exp.to}}
+                </p>
+                <p>{{exp.company}}</p>
+            </div>
+            <div class="col-md-9">
+                <h5>{{exp.position}}</h5>
+                <ul>
+                    <li *ngFor="let det of exp.detail">{{det}}</li>
+                </ul>                
+            </div>
+        </div>
+
+        <button class="btn btn-link link-secondary" (click)="openPrevWork(prevExp)" *ngIf="hidePrev">
+            Previous experience
+        </button>
+
+        <div [(ngbCollapse)]="hidePrev" class="mb-5" id="previous-experience" #prevExp>
+            <div class="row" *ngFor="let exp of prevWorkExp">
+                <div class="col-md-3">
+                    <p>
+                        {{exp.from}} - {{exp.to}}
+                    </p>
+                    <p>{{exp.company}}</p>
+                </div>
+                <div class="col-md-9">
+                    <h5>{{exp.position}}</h5>
+                    <ul>
+                        <li *ngFor="let det of exp.detail">{{det}}</li>
+                    </ul>                
+                </div>
+            </div>
+        </div>
     </div>
 </section>

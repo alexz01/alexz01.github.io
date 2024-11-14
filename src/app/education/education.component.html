@@ -1,0 +1,18 @@
+<section>
+    <div class="container">
+        <h2 class="text-center mb-4">Education</h2>
+
+        <div class="row" *ngFor="let edu of education">
+            <div class="col-md-3">
+                <p>
+                    {{edu.from}} - {{edu.to}}
+                </p>
+            </div>
+            <div class="col-md-9">
+                <h5>{{edu.degree}} in {{edu.course}}</h5>
+                <p>{{edu.name}}</p>
+                <p>{{edu.location}}</p>
+            </div>
+        </div>
+    </div>
+</section>
