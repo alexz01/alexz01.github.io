@@ -1,0 +1,15 @@
+{
+    "short_name": "Alex's Site",
+    "name": "Alexander Umale personal site",
+    "description":"This is my personal site, mainly for resume.",
+    "icons": [
+      {
+        "src": "favicon.svg",
+        "sizes": "144x144",
+        "type": "image/svg+xml"
+      }
+    ],
+    "start_url": "/",
+    "theme_color": "#f8f9fa",
+    "background_color": "#ffffff"
+  }

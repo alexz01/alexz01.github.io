@@ -16,11 +16,12 @@ export class WorkExpComponent {
       "company": "Willis Towers Watson",
       "location": "Buffalo, NY",
       "detail": [
-        "Designed and implemented a WCAG-compliant profile page, leveraging Angular Material for better UI components",
-        "Spearheaded the technical upgrade roadmap for migrating a legacy AngularJS Hybrid app to Angular 14, improving performance, security and scalability.",
-        "Led the modernization and maintenance of critical microservices using .NET Core and JWT authentication, streamlining integration with internal services for consumer identity management.",
-        "Streamlined the release process by designing a YAML pipeline for Azure DevOps and AKS, automating deployments.",
-        "Developed document processing workflows using Azure Document Intelligence, reducing manual workload. "
+        "Lead individual contributor for Benefits Access consumer and admin web portal serving over 200,000 users monthly.",
+        "Led and mentored a distributed agile team of 4 developers, resulting in 20% improvement in sprint completion rate and enhanced collaboration across multiple time zones.",
+        "Spearheaded feature development of option-based benefit selection using Angular - Typescript, C# .Net core, and SQL, providing a new way to enroll in single use benefits along with yearly health benefits.",
+        "Led the modernization and maintenance of benefits web app and critical RESTful microservices using Angular 16, .NET Core 8 and OAuth 2 authentication, reducing response time by 15%.",
+        "Streamlined the code release process by designing a CI/CD YAML pipeline in Azure DevOps, automating deployments and reducing deployment time by 30%.",
+        "Developed document processing workflows using Azure Document Intelligence, reducing manual workload."
       ],
       "from": "April 2023",
       "to": "Present"
@@ -30,8 +31,8 @@ export class WorkExpComponent {
       "company": "Willis Towers Watson",
       "location": "Buffalo, NY",
       "detail": [
-        "Led a project to create dynamic forms in Angular using Reactive Forms, enabling configurable form fields and validation based on client-specific requirements. The form data enables quoting system to specialize quotes.",
-        "Upgraded the app's routing from legacy AngularJS to state-based routing using UI-Router, modernizing navigation and performance."
+        "Managed the development of dynamic customer info feature using Angular Reactive Forms, ASP.NET MVC and Entity Framework for Admin app, enabling custom consumer information input and improved benefit quote alignment.",
+        "Implemented state-based routing using UI-Router in Angular app, resulting in significantly improved navigation speeds and enhanced user experience."
       ],
       "from": "April 2022",
       "to": "March 2023"
@@ -41,9 +42,9 @@ export class WorkExpComponent {
       "company": "Willis Towers Watson",
       "location": "Buffalo, NY",
       "detail": [
-        "Contributed to migrating a legacy AngularJS application to a hybrid AngularJS-Angular app, converting essential services and components. Used Webpack and Babel loader to build AngularJS.",
-        "Enhanced a critical workflow system by enabling parallel workflows for eligibility-based benefits changes, using a priority-based rule system for timely benefit enrollment.",
-        "Updated the localization system using IndexedDB to improve support for dynamic, multilingual content delivery."
+        "Contributed to migrating a monolithic web application to a hybrid AngularJS app and .Net microservices, converting essential services to modern standards, and enabling better maintainable code.",
+        "Enhanced a benefits selection workflow system by enabling parallel workflows, reducing processing time for eligibility changes by 25%.",
+        "Upgraded the localization system with AngularJS component and Indexed DB, which improved support for dynamic, multilingual content delivery and reduced page load time by 15%."
       ],
       "from": "August 2019",
       "to": "March 2022"
@@ -57,20 +58,11 @@ export class WorkExpComponent {
       "location": "Mumbai, India",
       "detail": [
         "Lead the morning shift of application development support project for one of the leading bank in Europe",
-        "Wrote multiple scripts and modules for HP Tandem Nonstop for smooth data processing and report generation"
-      ],
-      "from": "June 2017",
-      "to": "August 2017"
-    },
-    {
-      "position": "Assistant Systems Engineer",
-      "company": "Tata Consultancy Engineering",
-      "location": "Mumbai, India",
-      "detail": [
+        "Wrote multiple scripts and modules for HP Tandem Nonstop for smooth data processing and report generation",
         "Contributed to application support for Banking applications",
         "Worked on technical upgrade project for an HP Nonstop banking application. Designed processes and developed scripts for smooth and successful applcation migration"
       ],
-      "from": "June 2015",
+      "from": "June 2017",
       "to": "May 2017"
     }
   ]
