@@ -15,7 +15,7 @@ permissions:
   id-token: write
 
 env:
-  nodeVersion: 16.x
+  nodeVersion: 20.x
 
 jobs:
   build:
