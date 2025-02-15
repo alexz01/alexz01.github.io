@@ -1,11 +1,13 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { WorkExperience } from '../app.model';
+import { Component } from '@angular/core';
+import { WorkExperience } from '../../app.model';
+import { NgFor, NgIf } from '@angular/common';
+import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'r-work',
-  templateUrl: './work-exp.component.html'
+  templateUrl: './work-exp.component.html',
+  standalone: true,
+  imports: [NgFor, NgIf, NgbCollapse]
 })
 export class WorkExpComponent {
   hidePrev = true;
@@ -79,6 +81,6 @@ export class WorkExpComponent {
 
   openPrevWork(prevExpEl: HTMLElement) {
     this.hidePrev = !this.hidePrev;
-    setTimeout(()=> prevExpEl.scrollIntoView(), 10);
+    setTimeout(() => prevExpEl.scrollIntoView(), 10);
   }
 }

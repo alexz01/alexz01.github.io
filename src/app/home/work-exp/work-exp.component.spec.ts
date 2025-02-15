@@ -10,8 +10,7 @@ describe('WorkExpComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [WorkExpComponent],
-      imports: [HttpClientTestingModule, NgbModule]
+      imports: [WorkExpComponent]
     });
     fixture = TestBed.createComponent(WorkExpComponent);
     component = fixture.componentInstance;

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { DateObj } from '../app.model';
+import { DateObj } from '../../app.model';
 
 @Pipe({
   name: 'dateFormat'

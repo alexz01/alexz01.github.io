@@ -3,10 +3,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { IntroductionComponent } from '../introduction/introduction.component';
-import { WorkExpComponent } from '../work-exp/work-exp.component';
-import { EducationComponent } from '../education/education.component';
-import { ContactComponent } from '../contact/contact.component';
+import { IntroductionComponent } from './introduction/introduction.component';
+import { WorkExpComponent } from './work-exp/work-exp.component';
+import { EducationComponent } from './education/education.component';
+import { ContactComponent } from './contact/contact.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 describe('HomeComponent', () => {
@@ -15,8 +15,7 @@ describe('HomeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent, IntroductionComponent, WorkExpComponent, EducationComponent, ContactComponent],
-      imports: [HttpClientTestingModule, RouterTestingModule, NgbModule]
+      imports: [HomeComponent, IntroductionComponent, WorkExpComponent, EducationComponent, ContactComponent,]
     });
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;

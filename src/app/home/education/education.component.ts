@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { Education } from '../app.model';
+import { Education } from '../../app.model';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'r-education',
-  templateUrl: './education.component.html'
+  templateUrl: './education.component.html',
+  standalone: true,
+  imports: [NgFor]
 })
 export class EducationComponent {
 
