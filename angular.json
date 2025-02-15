@@ -69,10 +69,10 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "alex01.github.io:build:production"
+              "buildTarget": "alex01.github.io:build:production"
             },
             "development": {
-              "browserTarget": "alex01.github.io:build:development"
+              "buildTarget": "alex01.github.io:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "alex01.github.io:build"
+            "buildTarget": "alex01.github.io:build"
           }
         },
         "test": {
