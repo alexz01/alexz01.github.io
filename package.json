@@ -42,5 +42,13 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~5.4.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "@angular/build>lmdb": "-"
+    }
+  },
+  "optionalDependencies": {
+    "lmdb": "3.1.4"
   }
 }
