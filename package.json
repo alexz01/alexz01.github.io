@@ -9,7 +9,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test --configuration production",
     "test-watch": "ng test --configuration production --watch",
-    "test-browser": "ng test"
+    "test-browser": "ng test",
+    "blogs": "node blogs/convert-to-html.js"
   },
   "private": true,
   "dependencies": {

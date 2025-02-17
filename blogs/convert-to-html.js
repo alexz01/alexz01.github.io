@@ -10,7 +10,8 @@ const MAXDEPTH = 50;
  * @param {string} dest
  */
 async function markdownToMarkup(src, dest) {
-    console.log(src, dest);
+    console.log('md src:', src);
+    console.log('html dest:', dest);
     const converter = new Converter();
     return await readDirs(src);
 
@@ -46,6 +47,6 @@ async function markdownToMarkup(src, dest) {
     }
 }
 
-markdownToMarkup(__dirname, path.join(__dirname, '../assets/blogs'))
+markdownToMarkup(__dirname, path.join(__dirname, '../src/assets/blogs'))
     .then(console.log)
     .catch(console.error);
