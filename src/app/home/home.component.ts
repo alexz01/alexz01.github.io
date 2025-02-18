@@ -5,6 +5,7 @@ import { WorkExpComponent } from './work-exp/work-exp.component';
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 import { EducationComponent } from './education/education.component';
 import { ContactComponent } from './contact/contact.component';
+import { NavigatorComponent, NavUrl } from '../shared/navigator/navigator.component';
 
 @Component({
   selector: 'r-home',
@@ -15,12 +16,20 @@ import { ContactComponent } from './contact/contact.component';
     IntroductionComponent,
     WorkExpComponent,
     EducationComponent,
-    ContactComponent
+    ContactComponent,
+    NavigatorComponent
   ]
 })
 export class HomeComponent {
   navCollapsed = true;
   currentAnchor: string | null = null;
+  navUrls: NavUrl[] = [
+    {anchor:'about', title: 'About me'},
+    {anchor:'work-experience', title: 'Work XP'},
+    {anchor:'education', title: 'Education'},
+    {anchor:'contact', title: 'Contact'},
+  ];
+
   constructor(private router: Router,
   ) {
     router.events.subscribe(e => {

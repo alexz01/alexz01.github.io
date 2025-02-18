@@ -4,16 +4,22 @@ const { Converter } = require('showdown');
 
 const MAXDEPTH = 50;
 
+module.exports = {
+    markdownToMarkup
+};
+
 /**
  *
  * @param {string} src
  * @param {string} dest
  */
 async function markdownToMarkup(src, dest) {
-    console.log('md src:', src);
+    console.log('md src:   ', src);
     console.log('html dest:', dest);
     const converter = new Converter();
-    return await readDirs(src);
+    const map = await readDirs(src);
+    fs.writeFile(path.join(dest, 'map.json'), JSON.stringify(map), {encoding: 'utf8'});
+    return map;
 
     /**
      * @param {string} rootPath
@@ -38,9 +44,11 @@ async function markdownToMarkup(src, dest) {
             else if (child.name.endsWith('.md')) {
                 const markdownText = await fs.readFile(path.join(child.path, child.name), { encoding: 'utf8' });
                 const htmlText = converter.makeHtml(markdownText);
-                await fs.writeFile(path.join(destPath, child.name.slice(0, -2) + 'html'), htmlText, { encoding: 'utf8' });
+                const name = child.name.slice(0, -3);
+                const htmlName = name + '.html';
+                await fs.writeFile(path.join(destPath, htmlName), htmlText, { encoding: 'utf8' });
 
-                localMap[child.name] = path.join(child.path, child.name);
+                localMap[child.name.slice(0, -3)] = path.relative(src, path.join(child.path, htmlName)).replaceAll('\\', '/');
             }
         }
         return localMap;

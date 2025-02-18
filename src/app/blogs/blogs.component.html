@@ -1,1 +1,10 @@
-<p>blogs works!</p>
+<r-navigator></r-navigator>
+
+<div class="container">
+    <h1>My personal blog</h1>
+    <p>I don't usually blog. Just trying out something.</p>
+    <ng-container *ngFor="let item of blogMap() | keyvalue">
+        <h3></h3>
+    </ng-container>
+</div>
+{{blogMap() | json}}
