@@ -18,7 +18,7 @@ async function markdownToMarkup(src, dest) {
     console.log('html dest:', dest);
     const converter = new Converter();
     const map = await readDirs(src);
-    fs.writeFile(path.join(dest, 'map.json'), JSON.stringify(map), {encoding: 'utf8'});
+    fs.writeFile(path.join(dest, 'map.json'), JSON.stringify(map), { encoding: 'utf8' });
     return map;
 
     /**
@@ -42,13 +42,12 @@ async function markdownToMarkup(src, dest) {
                 localMap[child.name] = await readDirs(path.join(rootPath, child.name), depth + 1);
             }
             else if (child.name.endsWith('.md')) {
-                const markdownText = await fs.readFile(path.join(child.path, child.name), { encoding: 'utf8' });
+                const markdownText = await fs.readFile(child.path, { encoding: 'utf8' });
                 const htmlText = converter.makeHtml(markdownText);
                 const name = child.name.slice(0, -3);
-                const htmlName = name + '.html';
-                await fs.writeFile(path.join(destPath, htmlName), htmlText, { encoding: 'utf8' });
+                await fs.writeFile(path.join(destPath, name), htmlText, { encoding: 'utf8' });
 
-                localMap[child.name.slice(0, -3)] = path.relative(src, path.join(child.path, htmlName)).replaceAll('\\', '/');
+                localMap[child.name.slice(0, -3)] = path.relative(src, path.join(child.parentPath, name)).replaceAll('\\', '_').replaceAll('/', '_');
             }
         }
         return localMap;

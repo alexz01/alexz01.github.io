@@ -1,7 +1,10 @@
 <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
     <div class="container">
-        <a href="#" class="navbar-brand">Alexander Umale</a>
         <div class="d-flex p-2">
+            <a href="#" class="navbar-brand ">
+                <span class="d-lg-none">AU</span>
+                <span class="d-none d-lg-block">Alexander Umale</span>
+            </a>
             <a class="link-secondary p-2" href="https://linkedin.com/in/alexanderumale" title="linkedin link"
                 target="_blank" rel="opener">
                 <i class="bi bi-linkedin h4"></i>
@@ -16,6 +19,10 @@
             <a class="link-secondary p-2" href="assets/ResumeAlexanderUmale.pdf" title="Resume PDF" target="_blank"
                 rel="opener">
                 <i class="bi bi-filetype-pdf h4"></i>
+            </a>
+            <a class="link-secondary p-2" title="Toggle dark mode" (click)="toggleDarkMode()">
+                <i class="bi h4" [class.bi-sun-fill]="(darkModeOn$ | async)"
+                    [class.bi-moon-stars]="!(darkModeOn$ | async)"></i>
             </a>
         </div>
         <ng-container *ngIf="navUrls.length > 0">

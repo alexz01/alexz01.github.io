@@ -1,4 +1,4 @@
-Why am I writing blogs?
+# Why am I writing blogs?
 
 So why am I adding a blogs section to my website? I am not really a blogger to begin with, heck I don't even post on the social media sites.
 Well basically I never learned to type; I mean know how to type just not how to type with your fingers on "asdf-jkl;."

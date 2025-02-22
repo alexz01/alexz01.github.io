@@ -1,8 +1,10 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, signal, Signal } from '@angular/core';
+import { Component, OnInit, Signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { NavigatorComponent } from '../shared/navigator/navigator.component';
-import { JsonPipe, KeyValuePipe, NgFor, NgForOf } from '@angular/common';
+import { AsyncPipe, KeyValuePipe, NgForOf, TitleCasePipe } from '@angular/common';
+import { BlogsMap } from './blogs.service';
+import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'r-blogs',
@@ -10,16 +12,22 @@ import { JsonPipe, KeyValuePipe, NgFor, NgForOf } from '@angular/common';
   imports: [NavigatorComponent,
     NgForOf,
     KeyValuePipe,
-    JsonPipe
+    TitleCasePipe,
+    RouterLink,
+    RouterOutlet,
+    AsyncPipe,
   ],
   templateUrl: './blogs.component.html'
 })
-export class BlogsComponent {
+export class BlogsComponent implements OnInit {
 
-  blogMap!: Signal<Record<string, string | Record<string, string>>>;
+  blogMap!: BlogsMap;
 
-  constructor(private httpClient: HttpClient) {
-    const blogs = this.httpClient.get<Record<string, string | Record<string, string>>>('/assets/blogs/map.json');
-    this.blogMap = toSignal(blogs, { initialValue: {} });
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    this.blogMap = this.route.snapshot.data['blogMap'];
   }
 }
+
+

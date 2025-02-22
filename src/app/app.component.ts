@@ -18,7 +18,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.themeService.darkModeEnabled$
       .subscribe(enabled => {
-        console.log('dark', enabled);
         if (enabled) {
           this.document.querySelector('html')?.setAttribute('data-bs-theme', 'dark');
         }

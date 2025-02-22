@@ -25,6 +25,11 @@ export class ThemeService implements OnDestroy {
       });
   }
 
+  toggleDarkMode() {
+    this._darkModeEnabled = !this._darkModeEnabled;
+    this._darkModeEnabled$.next(this._darkModeEnabled);
+  }
+
   get darkModeEnabled() { return this._darkModeEnabled; }
 
   ngOnDestroy() {

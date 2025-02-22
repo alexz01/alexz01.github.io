@@ -1,10 +1,20 @@
 <r-navigator></r-navigator>
 
-<div class="container">
-    <h1>My personal blog</h1>
-    <p>I don't usually blog. Just trying out something.</p>
-    <ng-container *ngFor="let item of blogMap() | keyvalue">
-        <h3></h3>
+<!-- TODO: Add year and month reverse ordering -->
+<div class="container pt-5">
+  <h1>My personal blog</h1>
+  <p>I don't usually blog. Just trying out something.</p>
+  <ng-container *ngFor="let year of blogMap | keyvalue">
+    <h3>{{year.key}}</h3>
+    <ng-container *ngFor="let month of year.value| keyvalue">
+      <h4 class="px-2">{{month.key | titlecase}}</h4>
+      <ul>
+        <li *ngFor="let blog of month.value | keyvalue">
+          <a [routerLink]="blog.value" routerLinkActive="router-link-active">
+            {{blog.key.replaceAll('-', ' ') | titlecase}}</a>
+        </li>
+      </ul>
     </ng-container>
+  </ng-container>
+  <router-outlet></router-outlet>
 </div>
-{{blogMap() | json}}

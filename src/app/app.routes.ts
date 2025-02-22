@@ -5,11 +5,11 @@ export const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'not-found',
-    loadChildren: () => import('./error/error.component').then(m => m.ErrorComponent)
+    loadComponent: () => import('./error/error.component').then(i => i.ErrorComponent)
   },
   {
-    path: 'blogs',
-    loadComponent: () => import('./blogs/blogs.component').then(m => m.BlogsComponent)
+    path: 'blog',
+    loadChildren: () => import('./blogs/blogs.routes').then(i => i.blogRoutes)
   },
   { path: '**', redirectTo: '/not-found' },
 ];
